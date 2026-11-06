@@ -1,0 +1,11 @@
+services:
+  hermes:
+    image: nousresearch/hermes-agent:latest
+    container_name: hermes
+    command: ["gateway", "run"]
+    restart: unless-stopped
+    ports:
+      - "8642:8642"   # API du gateway
+      - "9120:9120"   # Workspace web (Hermes Desktop dans le navigateur)
+    volumes:
+      - ./data:/opt/data

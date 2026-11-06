@@ -1,0 +1,5 @@
+# Données de l'agent (conversations, clés, bases) : ne jamais les publier
+data/
+.env
+*.db
+*.db-*
